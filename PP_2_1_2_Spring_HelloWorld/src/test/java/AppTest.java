@@ -24,6 +24,9 @@ public class AppTest {
         Cat one = applicationContext.getBean(Cat.class);
         Cat two = applicationContext.getBean(Cat.class);
 
+        boolean a = tree == leaf;
+        boolean b = one == two;
+
         Assert.assertSame("Тест провален, не корректная настройка бина HelloWorld", tree, leaf);
         Assert.assertNotSame("Тест провален, не корректная настройка бина Cat", one, two);
     }
